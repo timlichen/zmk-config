@@ -26,6 +26,18 @@
 #define PASTE LG(V)
 
 / {
+    chosen {
+        zmk,studio-unlock = &studio_unlock;
+    };
+
+    studio_unlock: studio_unlock {
+        compatible = "zmk,studio-unlock";
+    key = 
+        0x9A3F7B82 0xE1C45D96 0x7F2A8B3C 0xD4E65F91
+        0x8C2B7A4E 0xF9D13856 0x5E2C9B47 0xA6F84D29
+    >;
+    };
+
     combos {
         compatible = "zmk,combos";
 
