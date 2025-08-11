@@ -3,65 +3,167 @@ Endgame wireless split ergo keeb with low-profile switches and keycaps
 
 [[https://i.imgur.com/UK9RJ01.jpg]]
 
-** Features
-1. Minimal design - no diodes, LEDs, OLEDs
-2. Ultra low-profile and transportable
-3. Colemak with home row mods -- really comfy
-4. Caps word for typing identifiers like =THIS_IS_A_CONSTANT=
+# Rae Dux QWERTY Keymap
 
-** Layout
-#+begin_example
-/* ,----------------------------------.                ,----------------------------------.
- * |  Q   |  W   |  F   |  P   |  B   |                |  J   |  L   |  U   |  Y   |  '   |
- * |------+------+------+------+------|                |------+------+------+------+------|
- * | ⌥_A  | ⌘_R  | ⇧_S  | ⌃_T  |  G   |                |  M   | ⌃_N  | ⇧_E  | ⌘_I  | ⌥_O  |
- * |------+------+------+------+------|                |------+------+------+------+------|
- * |  Z   |  X   |  C   |  D   |  V   |                |  K   |  H   |  ,   |  .   |  /   |
- * `------+------+------+------+------+------.  ,------+------+------+------+------+------|
- *                      |3_TAB |1_SPC |2_ESC |  |2_DEL |1_BSPC|3_ENT |
- *                      `--------------------'  `--------------------'
+A feature-rich QWERTY layout for the Rae Dux 34-key split keyboard built with ZMK firmware. This keymap provides all the functionality of a full keyboard in a compact, ergonomic package.
 
-/* ,----------------------------------.                ,----------------------------------.
- * |  '   |  <   |  >   |  "   |  &   |                |  ::  |  .   |  {   |  }   |  %   |
- * |------+------+------+------+------|                |------+------+------+------+------|
- * |  !   |  -   |  +   |  =   |  |   |                |  :   |  #   |  (   |  )   |  @   |
- * |------+------+------+------+------|                |------+------+------+------+------|
- * |  ^   |  /   |  *   |  \   |  ~   |                |lambda|  $   |  [   |  ]   |  ?   |
- * `------+------+------+------+------+------.  ,------+------+------+------+------+------|
- *                      |      |      |      |  |      |      |      |
- *                      `--------------------'  `--------------------'
+## 🚀 Quick Start
 
-/* ,----------------------------------.                ,----------------------------------.
- * | F10  |  F6  |  F5  |  F4  |  *   |                |  +   |  4   |  5   |  6   |  _   |
- * |------+------+------+------+------|                |------+------+------+------+------|
- * | F11  |  F3  |  F2  |  F1  |  ⇧   |                |  -   |  1   |  2   |  3   |  .   |
- * |------+------+------+------+------|                |------+------+------+------+------|
- * | F12  |  F9  |  F8  |  F7  |  :   |                |  =   |  7   |  8   |  9   |  ,   |
- * `------+------+------+------+------+------.  ,------+------+------+------+------+------|
- *                      |      |      |  0   |  |  0   |      |      |
- *                      `--------------------'  `--------------------'
+### What is ZMK?
+[ZMK (Zephyr Mechanical Keyboard)](https://zmk.dev) is an open-source wireless keyboard firmware that provides advanced features like:
+- Bluetooth connectivity
+- Multiple device pairing
+- Low power consumption
+- Advanced key behaviors
 
-/* ,----------------------------------.                ,----------------------------------.
- * |      |      |      |      |BT_CLR|                |BT_PRV|BT_NXT|      |      |      |
- * |------+------+------+------+------|                |------+------+------+------+------|
- * |  ⌥   |  ⌘   |  ⇧   |  ⌃   |      |                |      | LEFT | DOWN |  UP  | RGHT |
- * |------+------+------+------+------|                |------+------+------+------+------|
- * |      | cut  | copy | paste|      |                |      | HOME | WBAK | WFWD | END  |
- * `------+------+------+------+------+------.  ,------+------+------+------+------+------|
- *                      |      |      |      |  |      |      |      |
- *                      `--------------------'  `--------------------'
-#+end_example
+### Installation
+1. Fork the [ZMK config repository](https://github.com/zmkfirmware/zmk-config)
+2. Replace the keymap file with this configuration
+3. GitHub Actions will automatically build your firmware
+4. Download the `.uf2` files and flash to your keyboard
 
-Base layer:
-+ Colemak Mod-DH
+## 📋 Layout Overview
 
-Symbol layer:
-+ Inspired by Getreuer's symbol layer as most of my programming is in C++/Scheme/Clojure (and soon JavaScript)
-+ I used to have my brackets like the Seniply layout because when working in IDEs, normally they will insert the closing bracket for you. However, I found that being able to roll both brackets to be important.
+This keymap uses a **4-layer system** accessed through thumb keys:
 
-Number layer:
-+ Inspired by Pnohty's numpad+, I reversed the order of the numbers so the lowest digits are in the most comfortable positions (following Benford's law)
-+ Function keys are on the right hand, on Mac, these send the "actions" by default instead of the actual function keys (e.g., volume up/down are sent when you hit F11/F12)
+```
+Layer 0: Base (QWERTY)
+Layer 1: Symbols 
+Layer 2: Numbers & Functions
+Layer 3: Navigation & Bluetooth
+```
 
-Nav layer:
-+ The mods on the left-hand are sticky, so I can hit them and combine them with keys on other layers
+## 🔤 Layer 0: Base QWERTY
+
+```
+╭─────────────────────────╮ ╭─────────────────────────╮
+│  Q    W    E    R    T  │ │  Y    U    I    O    P  │
+│  A    S    D    F    G  │ │  H    J    K    L    ;  │
+│  Z    X    C    V    B  │ │  N    M    ,    .    /  │
+╰──────╮ Tab  Spc  Esc   │ │  Del  Bsp  Ret ╭───────╯
+       ╰─────────────────╯ ╰─────────────────╯
+```
+
+### Home Row Mods
+**Left Hand:** A(Alt) S(Cmd) D(Shift) F(Ctrl)  
+**Right Hand:** J(Ctrl) K(Shift) L(Cmd) ;(Alt)
+
+**How it works:** Hold the key to activate the modifier, tap to type the letter.
+
+### Thumb Keys
+- **Tab**: Tap for Tab, Hold for Navigation layer
+- **Space**: Tap for Space, Hold for Symbol layer  
+- **Esc**: Tap for Escape, Hold for Number layer
+- **Del**: Tap for Delete, Hold for Number layer
+- **Backspace**: Tap for Backspace, Hold for Symbol layer
+- **Enter**: Tap for Enter, Hold for Navigation layer
+
+## 🔣 Layer 1: Symbols
+
+```
+╭─────────────────────────╮ ╭─────────────────────────╮
+│  !    @    #    $    %  │ │  ^    &    *    (    )  │
+│  `    -    =    [    ]  │ │  \    '    "    {    }  │
+│  ~    _    +    <    >  │ │  |    :    ?    ,    .  │
+╰──────╮ Tab  ███  Esc   │ │  Del  ███  Ret ╭───────╯
+       ╰─────────────────╯ ╰─────────────────╯
+```
+*███ = Layer key (held down)*
+
+Access all punctuation and symbols without reaching for number row.
+
+## 🔢 Layer 2: Numbers & Functions
+
+```
+╭─────────────────────────╮ ╭─────────────────────────╮
+│  F1   F2   F3   F4   F5 │ │  F6   F7   F8   F9  F10 │
+│  1    2    3    4    5  │ │  6    7    8    9    0  │
+│ F11  F12   ▓    ▓    ▓  │ │  -    =    [    ]    \  │
+╰──────╮ Tab  Spc  ███   │ │  ███  Bsp  Ret ╭───────╯
+       ╰─────────────────╯ ╰─────────────────╯
+```
+*▓ = Transparent (no function)*
+
+Numbers laid out for easy access, plus all function keys.
+
+## 🧭 Layer 3: Navigation & Bluetooth
+
+```
+╭─────────────────────────╮ ╭─────────────────────────╮
+│  ▓    ▓    ▓    ▓   BTCLR│ │ BTPRV BTNXT  ▓    ▓    ▓ │
+│ Alt  Cmd  Shft Ctrl  ▓  │ │  ▓    ←    ↓    ↑    →  │
+│  ▓   Cut  Copy Paste ▓  │ │  ▓   Home PgDn PgUp  End │
+╰──────╮ ███  Spc  Esc   │ │  Del  Bsp  ███ ╭───────╯
+       ╰─────────────────╯ ╰─────────────────╯
+```
+
+Navigation arrows, clipboard operations, and Bluetooth management.
+
+## ⚡ Combos (Advanced)
+
+**Combos** let you press two keys simultaneously for additional functions:
+
+| Combo Keys | Output | Description |
+|------------|--------|-------------|
+| W + E | ` (grave) | Backtick |
+| U + I | ; (semicolon) | Semicolon |
+| X + C | = (equal) | Equal sign |
+| , + . | ' (quote) | Apostrophe |
+| F + G | Caps Word | Toggle caps word mode |
+| J + K | Caps Word | Toggle caps word mode |
+| Spc + Bsp | - (minus) | Minus/hyphen |
+| Esc + Del | _ (underscore) | Underscore |
+
+### What is Caps Word?
+Caps Word automatically capitalizes letters until you press space, punctuation, or numbers. Perfect for typing `CONSTANTS` or `VARIABLE_NAMES`.
+
+## 🔗 Bluetooth Management
+
+### Pairing New Devices
+1. Hold thumb key to access Navigation layer (Layer 3)
+2. Press `BTCLR` (top-left on right hand) to clear all pairings
+3. Your keyboard will enter pairing mode
+4. Connect from your device's Bluetooth settings
+
+### Switching Between Devices
+- `BTPRV`: Switch to previous paired device
+- `BTNXT`: Switch to next paired device
+
+The keyboard can remember up to 5 paired devices.
+
+## 💡 Pro Tips
+
+### Getting Started
+1. **Start slow**: Focus on the base layer first
+2. **Learn thumb keys**: Master Space/Symbol and Esc/Number combinations
+3. **Practice home row mods**: Start with Shift (D/K) as they're most familiar
+
+### Common Workflows
+- **Programming**: Use Symbol layer for brackets, operators
+- **Navigation**: Hold Tab for arrows and page keys  
+- **Numbers**: Hold Esc for number pad and function keys
+
+### Troubleshooting
+- **Accidental modifiers**: Reduce hold time if you trigger mods unintentionally
+- **Missing keys**: Check if you're on the right layer
+- **Bluetooth issues**: Use BTCLR to reset connections
+
+## 🛠 Customization
+
+Want to modify this layout? Key areas to customize:
+
+1. **Combos**: Add/remove key combinations in the combos section
+2. **Home row mods**: Adjust which fingers have which modifiers
+3. **Layer access**: Change which thumb keys access which layers
+4. **Symbol placement**: Rearrange symbols on Layer 1 to match your needs
+
+## 📚 Resources
+
+- [ZMK Documentation](https://zmk.dev/docs)
+- [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/) - Visual keymap editor
+- [ZMK Discord](https://zmk.dev/community/discord/invite) - Community support
+- [Key Codes Reference](https://zmk.dev/docs/codes) - All available key codes
+
+---
+
+**Happy typing!** 🎹 This layout provides a powerful, efficient typing experience once you get comfortable with the layers and combos.
