@@ -1,169 +1,86 @@
-* rae-dux
-Endgame wireless split ergo keeb with low-profile switches and keycaps
-
-[[https://i.imgur.com/UK9RJ01.jpg]]
-
 # Rae Dux QWERTY Keymap
 
-A feature-rich QWERTY layout for the Rae Dux 34-key split keyboard built with ZMK firmware. This keymap provides all the functionality of a full keyboard in a compact, ergonomic package.
+34-key split keyboard QWERTY layout with ZMK firmware. Windows-optimized with 4-layer system.
 
-## 🚀 Quick Start
+## Layers
 
-### What is ZMK?
-[ZMK (Zephyr Mechanical Keyboard)](https://zmk.dev) is an open-source wireless keyboard firmware that provides advanced features like:
-- Bluetooth connectivity
-- Multiple device pairing
-- Low power consumption
-- Advanced key behaviors
-
-### Installation
-1. Fork the [ZMK config repository](https://github.com/zmkfirmware/zmk-config)
-2. Replace the keymap file with this configuration
-3. GitHub Actions will automatically build your firmware
-4. Download the `.uf2` files and flash to your keyboard
-
-## 📋 Layout Overview
-
-This keymap uses a **4-layer system** accessed through thumb keys:
-
-```
-Layer 0: Base (QWERTY)
-Layer 1: Symbols 
-Layer 2: Numbers & Functions
-Layer 3: Navigation & Bluetooth
-```
-
-## 🔤 Layer 0: Base QWERTY
-
+### Layer 0: Base QWERTY
 ```
 ╭─────────────────────────╮ ╭─────────────────────────╮
 │  Q    W    E    R    T  │ │  Y    U    I    O    P  │
 │  A    S    D    F    G  │ │  H    J    K    L    ;  │
 │  Z    X    C    V    B  │ │  N    M    ,    .    /  │
-╰──────╮ Tab  Spc  Esc   │ │  Del  Bsp  Ret ╭───────╯
-       ╰─────────────────╯ ╰─────────────────╯
+╰──────╮ Tab  Spc  Esc    │ │  Del  Bsp  Ret   ╭──────╯
+       ╰──────────────────╯ ╰──────────────────╯
 ```
 
-### Home Row Mods
-**Left Hand:** A(Alt) S(Cmd) D(Shift) F(Ctrl)  
-**Right Hand:** J(Ctrl) K(Shift) L(Cmd) ;(Alt)
+**Home Row Mods:** A(Alt) S(Win) D(Shift) F(Ctrl) | J(Ctrl) K(Shift) L(Win) ;(Alt)
 
-**How it works:** Hold the key to activate the modifier, tap to type the letter.
+**Thumb Keys:** 
+- Tab/Nav | Space/Sym | Esc/Num | Del/Num | Bsp/Sym | Enter/Nav
 
-### Thumb Keys
-- **Tab**: Tap for Tab, Hold for Navigation layer
-- **Space**: Tap for Space, Hold for Symbol layer  
-- **Esc**: Tap for Escape, Hold for Number layer
-- **Del**: Tap for Delete, Hold for Number layer
-- **Backspace**: Tap for Backspace, Hold for Symbol layer
-- **Enter**: Tap for Enter, Hold for Navigation layer
-
-## 🔣 Layer 1: Symbols
-
+### Layer 1: Symbols
 ```
 ╭─────────────────────────╮ ╭─────────────────────────╮
 │  !    @    #    $    %  │ │  ^    &    *    (    )  │
 │  `    -    =    [    ]  │ │  \    '    "    {    }  │
 │  ~    _    +    <    >  │ │  |    :    ?    ,    .  │
-╰──────╮ Tab  ███  Esc   │ │  Del  ███  Ret ╭───────╯
-       ╰─────────────────╯ ╰─────────────────╯
+╰──────╮ Tab  ███  Esc    │ │  Del  ███  Ret  ╭───────╯
+       ╰──────────────────╯ ╰─────────────────╯
 ```
-*███ = Layer key (held down)*
 
-Access all punctuation and symbols without reaching for number row.
-
-## 🔢 Layer 2: Numbers & Functions
-
+### Layer 2: Numbers & Functions
 ```
 ╭─────────────────────────╮ ╭─────────────────────────╮
 │  F1   F2   F3   F4   F5 │ │  F6   F7   F8   F9  F10 │
 │  1    2    3    4    5  │ │  6    7    8    9    0  │
 │ F11  F12   ▓    ▓    ▓  │ │  -    =    [    ]    \  │
-╰──────╮ Tab  Spc  ███   │ │  ███  Bsp  Ret ╭───────╯
-       ╰─────────────────╯ ╰─────────────────╯
+╰──────╮ Tab  Spc  ███    │ │  ███  Bsp  Ret   ╭──────╯
+       ╰──────────────────╯ ╰──────────────────╯
 ```
-*▓ = Transparent (no function)*
 
-Numbers laid out for easy access, plus all function keys.
-
-## 🧭 Layer 3: Navigation & Bluetooth
-
+### Layer 3: Navigation & Bluetooth
 ```
-╭─────────────────────────╮ ╭─────────────────────────╮
-│  ▓    ▓    ▓    ▓   BTCLR│ │ BTPRV BTNXT  ▓    ▓    ▓ │
-│ Alt  Cmd  Shft Ctrl  ▓  │ │  ▓    ←    ↓    ↑    →  │
+╭─────────────────────────╮ ╭──────────────────────────╮
+│  ▓    ▓    ▓    ▓  BTCLR│ │ BTPRV BTNXT  ▓    ▓    ▓ │
+│ Alt  Win  Shft Ctrl  ▓  │ │  ▓    ←    ↓    ↑    →   │
 │  ▓   Cut  Copy Paste ▓  │ │  ▓   Home PgDn PgUp  End │
-╰──────╮ ███  Spc  Esc   │ │  Del  Bsp  ███ ╭───────╯
-       ╰─────────────────╯ ╰─────────────────╯
+╰──────╮ ███  Spc  Esc    │ │  Del  Bsp     ███ ╭──────╯
+       ╰──────────────────╯ ╰───────────────────╯
 ```
 
-Navigation arrows, clipboard operations, and Bluetooth management.
+## Combos
 
-## ⚡ Combos (Advanced)
+| Keys | Output | Keys | Output |
+|------|--------|------|--------|
+| W+E | ` | U+I | ; |
+| X+C | = | ,+. | ' |
+| F+G | Caps Word | J+K | Caps Word |
+| Spc+Bsp | - | Esc+Del | _ |
 
-**Combos** let you press two keys simultaneously for additional functions:
+## Key Features
 
-| Combo Keys | Output | Description |
-|------------|--------|-------------|
-| W + E | ` (grave) | Backtick |
-| U + I | ; (semicolon) | Semicolon |
-| X + C | = (equal) | Equal sign |
-| , + . | ' (quote) | Apostrophe |
-| F + G | Caps Word | Toggle caps word mode |
-| J + K | Caps Word | Toggle caps word mode |
-| Spc + Bsp | - (minus) | Minus/hyphen |
-| Esc + Del | _ (underscore) | Underscore |
+**Home Row Mods:** Hold letter keys for modifiers (200ms timing)
+**Positional Hold-Tap:** Prevents accidental mods on same hand
+**Sticky Keys:** On nav layer - tap to stick modifier for next key
+**Caps Word:** Auto-capitalize until space/punctuation
+**Windows Clipboard:** Cut(Ctrl+X), Copy(Ctrl+C), Paste(Ctrl+V)
 
-### What is Caps Word?
-Caps Word automatically capitalizes letters until you press space, punctuation, or numbers. Perfect for typing `CONSTANTS` or `VARIABLE_NAMES`.
+## Bluetooth
 
-## 🔗 Bluetooth Management
+- **BTCLR:** Clear all pairings
+- **BTPRV/BTNXT:** Switch between 5 paired devices
 
-### Pairing New Devices
-1. Hold thumb key to access Navigation layer (Layer 3)
-2. Press `BTCLR` (top-left on right hand) to clear all pairings
-3. Your keyboard will enter pairing mode
-4. Connect from your device's Bluetooth settings
+## Technical
 
-### Switching Between Devices
-- `BTPRV`: Switch to previous paired device
-- `BTNXT`: Switch to next paired device
+**Key Positions:**
+```
+╭────────────────────╮ ╭────────────────────╮
+│  0   1   2   3   4 │ │  5   6   7   8   9 │
+│ 10  11  12  13  14 │ │ 15  16  17  18  19 │
+│ 20  21  22  23  24 │ │ 25  26  27  28  29 │
+╰───────╮ 30  31  32 │ │ 33  34  35 ╭───────╯
+        ╰────────────╯ ╰────────────╯
+```
 
-The keyboard can remember up to 5 paired devices.
-
-## 💡 Pro Tips
-
-### Getting Started
-1. **Start slow**: Focus on the base layer first
-2. **Learn thumb keys**: Master Space/Symbol and Esc/Number combinations
-3. **Practice home row mods**: Start with Shift (D/K) as they're most familiar
-
-### Common Workflows
-- **Programming**: Use Symbol layer for brackets, operators
-- **Navigation**: Hold Tab for arrows and page keys  
-- **Numbers**: Hold Esc for number pad and function keys
-
-### Troubleshooting
-- **Accidental modifiers**: Reduce hold time if you trigger mods unintentionally
-- **Missing keys**: Check if you're on the right layer
-- **Bluetooth issues**: Use BTCLR to reset connections
-
-## 🛠 Customization
-
-Want to modify this layout? Key areas to customize:
-
-1. **Combos**: Add/remove key combinations in the combos section
-2. **Home row mods**: Adjust which fingers have which modifiers
-3. **Layer access**: Change which thumb keys access which layers
-4. **Symbol placement**: Rearrange symbols on Layer 1 to match your needs
-
-## 📚 Resources
-
-- [ZMK Documentation](https://zmk.dev/docs)
-- [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/) - Visual keymap editor
-- [ZMK Discord](https://zmk.dev/community/discord/invite) - Community support
-- [Key Codes Reference](https://zmk.dev/docs/codes) - All available key codes
-
----
-
-**Happy typing!** 🎹 This layout provides a powerful, efficient typing experience once you get comfortable with the layers and combos.
+**Timing:** 200ms hold-tap, 200ms quick-tap, 60ms combo timeout
